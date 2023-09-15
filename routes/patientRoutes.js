@@ -9,13 +9,14 @@ router.get('/', (req, res) => {
 
 router.post('/', async(req, res) => {
     try{
+        console.log('The patient details to be sent:', req.body)
         const patient = new Patient(req.body)
         console.log(patient)
         await patient.save()
         //.then(savedPatient => {
         //    console.log('Patient saved:' savedPatient)
         //})
-        res.redirect('/visits')
+        //res.redirect('/visits')
         res.json({success: true, message: 'Patient created successfully'})
     }catch(error){
         res.status(500).json({success: false, message: error.message})

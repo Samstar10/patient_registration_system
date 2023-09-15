@@ -3,7 +3,6 @@ const save = document.querySelector('#save')
 function registerPatient(e){
     e.preventDefault()
 
-
     const firstName = document.querySelector('#firstName').value
     const lastName = document.querySelector('#lastName').value
     const dateOfBirth = document.querySelector('#dateOfBirth').value

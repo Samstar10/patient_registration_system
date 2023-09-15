@@ -1,5 +1,9 @@
+const save = document.querySelector('#save')
+
 function registerPatient(e){
     e.preventDefault()
+
+
     const firstName = document.querySelector('#firstName').value
     const lastName = document.querySelector('#lastName').value
     const dateOfBirth = document.querySelector('#dateOfBirth').value
@@ -11,6 +15,8 @@ function registerPatient(e){
         dateOfBirth,
         gender
     }
+
+    console.log(patientData)
 
     fetch('/api/patients', {
         method: 'POST',
@@ -26,6 +32,8 @@ function registerPatient(e){
     })
     .catch(error => console.error('Error registering patient:', error))
 }
+
+save.addEventListener('click', registerPatient)
 
 document.querySelector('#clear').addEventListener('click', clearForm)
 
@@ -82,24 +90,24 @@ function calculateBMI(height, weight){
     return (weight / (heightInMeters * heightInMeters)).toFixed(2)
 }
 
-document.querySelector('#height').addEventListener('input', calculateBMI)
-document.querySelector('#weight').addEventListener('input', calculateBMI)
+//document.querySelector('#height').addEventListener('input', calculateBMI)
+//document.querySelector('#weight').addEventListener('input', calculateBMI)
 
 //Conditional rendering of section A and section B
-function toggleSections(){
-    const bmi = parseFloat(document.querySelector('#bmi').value)
-    const sectionA = document.querySelector('#sectionAForm')
-    const sectionB = document.querySelector('#sectionBForm')
+// function toggleSections(){
+//     const bmi = parseFloat(document.querySelector('#bmi').value)
+//     const sectionA = document.querySelector('#sectionAForm')
+//     const sectionB = document.querySelector('#sectionBForm')
 
-    if(!isNaN(bmi)){
-        if(bmi < 25){
-            sectionA.style.display = 'block'
-            sectionB.style.display = 'none'
-        }else{
-            sectionA.style.display = 'none'
-            sectionB.style.display = 'block'
-        }
-    }
-}
+//     if(!isNaN(bmi)){
+//         if(bmi < 25){
+//             sectionA.style.display = 'block'
+//             sectionB.style.display = 'none'
+//         }else{
+//             sectionA.style.display = 'none'
+//             sectionB.style.display = 'block'
+//         }
+//     }
+// }
 
-toggleSections()
+// toggleSections()

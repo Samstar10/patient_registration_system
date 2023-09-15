@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
 router.post('/', async(req, res) => {
     try{
         const patient = new Patient(req.body)
+        console.log(patient)
         await patient.save()
         //.then(savedPatient => {
         //    console.log('Patient saved:' savedPatient)

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Registration Page</h1>
+    </header>
+    <form id="patientRegistrationForm" action="/api/patients" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required><br>
+
+        <label for="dateOfBirth">DOB:</label>
+        <input type="date" id="dateOfBirth" required><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br>
+        <section class="buttons">
+            <button type="button" id="clear">Clear</button>
+            <button type="submit">Save</button>
+        </section>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+</html>

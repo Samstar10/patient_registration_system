@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+header{
+    background-color: rgb(176, 176, 199);
+    border: 2px solid rgb(119, 119, 197);
+    border-radius: 15px;
+    margin: 30px auto;
+    padding: 0 100px;
+}
+
+h1{
+    font-weight: 300;
+}
+
+form{
+    max-width: 400px;
+    width: 100%;
+}
+
+label, input, select{
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: larger;
+}
+
+.buttons{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    border-radius: 5px;
+    background-color: rgb(152, 201, 152);
+    border: 1px solid green;
+    padding: 5px 30px;
+}

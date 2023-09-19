@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const patientRoutes = require('./routes/patientRoutes')
-const visitRoutes = require('./routes/visitRoutes')
+// const visitRoutes = require('./routes/visitRoutes')
 const PORT = process.env.PORT || 3000
 
 app.use(bodyParser.json())

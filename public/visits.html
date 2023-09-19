@@ -22,19 +22,19 @@
         <input type="number" id="bmi" readonly><br>
 
         <!-- <button type="button" onclick="calculateBMI()">Calculate BMI</button> -->
-        <button type="button" onclick="submitVitals()">Submit</button>
+        <button type="button" id="submitVitals">Submit</button>
 
     </form>
 
     <!-- Section A -->
-    <form id="sectionAForm" action="/api/patients/visits" method="post">
+    <form id="sectionAForm">
         <label class="radio-label">General Health:</label>
         <section class="radio-group">
             <label>
-                <input type="radio" name="generalHealth" value="good">Good
+                <input type="radio" name="generalHealth" value="Good">Good
             </label>
             <label>
-                <input type="radio" name="generalHealth" value="poor">Poor<br>
+                <input type="radio" name="generalHealth" value="Poor">Poor<br>
             </label>
         </section>
 

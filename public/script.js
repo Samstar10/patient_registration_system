@@ -34,11 +34,18 @@ function registerPatient(e){
 
 save.addEventListener('click', registerPatient)
 
-document.querySelector('#clear').addEventListener('click', clearForm)
+const clear = document.querySelector('#clear')
 
 function clearForm(){
-    document.querySelector('#patientRegistrationForm').reset()
+    const registrationInputs = document.querySelector('#patientRegistrationForm input')
+    registrationInputs.forEach(elements => {
+        if (element.type === 'text' || element.type === 'number' || element.type === 'date') {
+            element.value = ''
+        }
+    })
 }
+
+clear.addEventListener('click', clearForm)
 
 
 const submit = document.querySelector('#submitVitals')

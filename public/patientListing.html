@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration</title>
+    <link rel="stylesheet" href="./listing.css">
+</head>
+<body>
+    <header>
+        <h1>Patient Report</h1>
+    </header>
+    <label for="filterDate">Filter by Date:</label>
+    <input type="date" id="filterDate">
+    <!-- <button onclick="filterPatients()">Filter</button> -->
+    <table>
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Age</th>
+                <th>BMI Status</th>
+            </tr>
+        </thead>
+        <tbody id="patientTable">
+            <!-- This will be auto-populated -->
+        </tbody>
+    </table>
+
+    <script src="../public/js/main.js"></script>
+</body>
+</html>
